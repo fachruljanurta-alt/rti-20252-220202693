@@ -102,17 +102,17 @@ Problem Statement (1 paragraf):
 
 Pilih satu topik di bidang TI yang diminati. Transformasikan melalui 5 tahap Problem Formation Model.
 
-**Topik awal:** ________________________________________
+**Topik awal:** Risiko Keamanan Siber pada Sistem Pemerintahan Berbasis Elektronik (SPBE).________________________________________
 
 | Tahap | Hasil |
 |-------|-------|
-| Reality | *Contoh: Aplikasi e-commerce sering ditinggalkan saat checkout* |
-| Observed Issue (Symptom) | *Contoh: Bounce rate checkout 68%* |
-| Diagnosed Problem (Root Cause) | |
-| Researchable Problem | |
-| Measurable Variable | |
+| Reality | Transformasi digital sedang dijalankan untuk mengintegrasikan pelayanan publik di Indonesia. |
+| Observed Issue (Symptom) | Adanya ratusan juta serangan siber per tahun dan rendahnya implementasi SPBE (hanya 2,89% institusi berpredikat sangat baik). |
+| Diagnosed Problem (Root Cause) |Kerentanan sistem akibat integrasi big data yang belum dibarengi dengan arsitektur keamanan dan kesadaran SDM yang memadai. |
+| Researchable Problem |Bagaimana merancang strategi mitigasi risiko keamanan siber yang mencakup pilar teknologi, manusia, dan tata kelola untuk melindungi layanan publik digital? |
+| Measurable Variable |Indeks kematangan SPBE, frekuensi serangan siber, dan skor Natural Cyber Security Index (NCSI) Indonesia. |
 
-**Apakah terjebak solution-first thinking?** [ ] Ya / [ ] Tidak
+**Apakah terjebak solution-first thinking?** [ ] Ya / [x] Tidak
 > Jika ya, kembali ke tahap mana? ________________________
 
 ---
@@ -123,14 +123,14 @@ Gambarkan konteks sistem dari masalah riset di Latihan 1.
 
 | Komponen | Deskripsi |
 |----------|----------|
-| Input | *Contoh: Request HTTP dari browser pengguna* |
-| Process | |
-| Output | |
-| Outcome | |
-| Constraints | |
-| Stakeholders | |
+| Input | Data pribadi masyarakat, riwayat transaksi, dan akses masuk ASN. |
+| Process |Pengelolaan data melalui arsitektur SPBE dan integrasi machine learning. |
+| Output |Layanan publik digital yang terintegrasi (kesehatan, pendidikan, keuangan). |
+| Outcome |Kualitas pelayanan publik yang lebih efisien, transparan, dan inklusif. |
+| Constraints |Kesenjangan anggaran antar daerah, perbedaan kapasitas digital, dan belum adanya arus utama regulasi pelindungan data. |
+| Stakeholders |Pemerintah pusat, pemerintah daerah, ASN, dan masyarakat.|
 
-**Komponen mana yang paling relevan dengan masalah riset?** _______________
+**Komponen mana yang paling relevan dengan masalah riset?** __Process (karena di sinilah titik kerentanan integrasi data dan ancaman siber terjadi)._____________
 
 ---
 
@@ -140,16 +140,16 @@ Evaluasi problem statement yang sudah dibuat menggunakan 5 kriteria.
 
 | Kriteria | Skor (1-5) | Justifikasi |
 |----------|-----------|-------------|
-| Clarity | *Contoh: 4 — cukup jelas tapi perlu spesifikasi dataset* | |
-| Measurability | | |
-| Relevance | | |
-| Testability | | |
-| Impact | | |
+| Clarity | 5 |Masalah sangat spesifik pada sektor pelayanan publik. |
+| Measurability |4 |Terdapat data statistik serangan dan indeks evaluasi SPBE |
+| Relevance |5 |Sangat relevan dengan tantangan transformasi digital nasional. |
+| Testability |4 |Strategi mitigasi dapat divalidasi melalui kerangka tata kelola. |
+| Impact | 5|Berdampak pada ketahanan nasional dan pelindungan data pribadi. |
 
-**Skor total:** _____ / 25
+**Skor total:** 23/ 25
 
 **Problem statement versi final (1 paragraf):**
-> ___________________________________________________
+> _Penelitian ini bertujuan untuk menganalisis risiko keamanan siber pada sistem pelayanan publik terintegrasi di Indonesia dengan mengevaluasi tiga pilar pembangunan siber—teknologi, manusia, dan tata kelola—guna merumuskan strategi mitigasi yang efektif untuk memastikan keberlanjutan dan ketahanan sistem pelayanan publik di era transformasi digital__________________________________________________
 > ___________________________________________________
 
 ---
@@ -159,5 +159,5 @@ Evaluasi problem statement yang sudah dibuat menggunakan 5 kriteria.
 > Bandingkan "masalah" yang biasa ditemui saat coding (bug, error) dengan masalah riset. Apa perbedaan fundamental dalam cara mendefinisikan dan mendekati keduanya?
 
 **Jawaban:**
-> ___________________________________________________
-> ___________________________________________________
+Masalah coding bersifat teknis dan deterministik; ia memiliki kondisi yang jelas antara benar atau salah, sehingga solusinya seringkali sudah tersedia melalui debugging atau perbaikan sintaks. Sebaliknya, masalah riset bersifat sistemik dan kompleks; ia tidak memiliki jawaban tunggal yang mutlak dan memerlukan sintesis dari berbagai aspek—seperti kebijakan, perilaku manusia, dan infrastruktur teknis—untuk memahami dan memitigasi risikonya secara holistik dalam skala nasional.
+> 
