@@ -123,20 +123,20 @@ Gunakan topik riset dari WS-02. Cari minimal 5 paper relevan menggunakan databas
 > - Tulis query Boolean yang digunakan: contoh `("object detection" OR "image classification") AND ("edge computing") NOT ("medical")`. Dokumentasikan query secara eksplisit.
 > - Akses gratis: buka Google Scholar → cari judul paper → klik [PDF] jika tersedia, atau akses lewat campus VPN
 
-**Topik riset:** ________________________________________
-**Query pencarian:** ____________________________________
-**Database:** ___________________________________________
+**Topik riset:** Risiko Keamanan Siber pada Sistem Pemerintahan Berbasis Elektronik (SPBE).
+**Query pencarian:** ("cyber security" OR "keamanan siber") AND ("digital transformation" OR "transformasi digital") AND ("public service" OR "pelayanan publik") NOT ("medical").
+**Database:** Google Scholar & UI Scholars Hub.
 
 | # | Study | Tahun | Method | Dataset | Result | Limitasi |
 |---|-------|-------|--------|---------|--------|----------|
-| 1 | *Contoh: Rahman et al.* | *2023* | *CNN* | *ImageNet subset* | *Acc 91%* | *Hanya 3 kelas* |
-| 2 | | | | | | |
-| 3 | | | | | | |
-| 4 | | | | | | |
-| 5 | | | | | | |
+| 1 | Alfi dkk | 2023 | Kualitatif | Laporan BSSN,Kasus Publik | Identifikasi 3 pilar |  |
+| 2 |Rofii |2018 |Analisis Stratejik |Dokumen Pertahanan |Postur ketahanan siber |Belum mencakup SPBE 4.0 |
+| 3 |Sudarmadi & Runturambi |2019 |Deskriptif |Strategi BSSN |Analisis ancaman siber |Fokus pada instansi BSSN |
+| 4 |Jayantho dkk. |2020 |Pemodelan Dinamis |Data Big Data |Meminimalisasi spionase |Fokus pada industri 4.0 |
+| 5 |Luthfah |2024 |Tinjauan Pustaka |Sektor Jasa Keuangan |Penguatan siber sektor keuangan |Terbatas pada sektor keuangan |
 
-**Pola yang terlihat — Metode dominan:** ___________________
-**Limitasi yang berulang:** ______________________________
+**Pola yang terlihat — Metode dominan:** Kualitatif dan tinjauan pustaka.
+**Limitasi yang berulang:** Fokus penelitian masih terkotak-kotak per sektor (keuangan/pertahanan) dan belum ada model mitigasi yang seragam untuk integrasi SPBE lintas instansi.
 
 ---
 
@@ -145,14 +145,14 @@ Gunakan topik riset dari WS-02. Cari minimal 5 paper relevan menggunakan databas
 Berdasarkan tabel di Latihan 1, identifikasi gap.
 
 | Jenis Gap | Ditemukan? | Gap Statement |
-|-----------|-----------|---------------|
-| Performance Gap | [ ] Ya / [ ] Tidak | *Contoh: Akurasi turun di bawah 80% untuk kelas minoritas* |
-| Method Gap | [ ] Ya / [ ] Tidak | |
-| Data Gap | [ ] Ya / [ ] Tidak | |
-| Context Gap | [ ] Ya / [ ] Tidak | |
+||-----------|---------------|
+| Performance Gap | [x ] Ya / [ ] Tidak | Hanya 2,89% instansi yang memiliki implementasi SPBE sangat baik. |
+| Method Gap | [ ] Ya / [ ] Tidak |- |
+| Data Gap | [x ] Ya / [ ] Tidak | Kurangnya data riil mengenai serangan siber pada tingkat pemda|
+| Context Gap | [x ] Ya / [ ] Tidak |Belum ada strategi mitigasi siber yang terintegrasi untuk "Satu Data Indonesia". |
 
-**Gap utama yang dipilih:** _____________________________
-**Mengapa gap ini penting (bukan sekadar "belum ada yang meneliti")?**
+**Gap utama yang dipilih:** Kesenjangan Konteks pada integrasi kebijakan "Satu Data Indonesia".
+**Mengapa gap ini penting (bukan sekadar "belum ada yang meneliti")?**Karena transformasi digital pelayanan publik memerlukan interoperabilitas data antar instansi, namun belum ada model keamanan yang selaras dengan tantangan geopolitik dan keragaman infrastruktur daerah.
 > ___________________________________________________
 
 ---
@@ -163,11 +163,11 @@ Pilih 2 baseline dari literatur yang sudah dibaca.
 
 | # | Baseline | Mengapa Relevan | Mengapa Representatif | Apakah SOTA? | Sumber |
 |---|----------|----------------|----------------------|-------------|--------|
-| 1 | *Contoh: RF + TF-IDF* | *Task sama: klasifikasi teks* | *Dipakai 6 dari 10 paper* | *Bukan, tapi common practice* | *Lee et al., 2022* |
-| 2 | | | | | |
+| 1 | Model Pertahanan Siber Kemenhan | Fokus pada gangguan pertahanan | Dasar regulasi keamanan negara | Tidak | Widjajanto dkk., 2023 |
+| 2 | Kerangka SPBE (Perpres 95/2018)|Dasar tata kelola SPBE |Standar nasional pemerintahan |Tidak |Alfi dkk., 2023 |
 
-**Apakah pemilihan baseline ini bisa dianggap straw man?** [ ] Ya / [ ] Tidak
-> Justifikasi: ________________________________________
+**Apakah pemilihan baseline ini bisa dianggap straw man?** [ ] Ya / [x ] Tidak
+> Justifikasi: Ini adalah praktik umum (baseline) karena mencerminkan realita kebijakan yang berlaku di Indonesia yang harus dipatuhi oleh seluruh institusi publik.
 
 ---
 
@@ -176,5 +176,6 @@ Pilih 2 baseline dari literatur yang sudah dibaca.
 > Apa perbedaan antara "belum ada yang meneliti ini" (klaim tanpa bukti) dengan research gap yang valid? Bagaimana cara membuktikan bahwa sebuah gap benar-benar ada?
 
 **Jawaban:**
-> ___________________________________________________
-> ___________________________________________________
+Apa perbedaan antara "belum ada yang meneliti ini" (klaim tanpa bukti) dengan riset gap yang valid?
+"Belum ada yang meneliti" hanyalah asumsi subjektif. Riset gap yang valid didasarkan pada evaluasi sistematis terhadap literatur yang ada yang menunjukkan bahwa meskipun suatu topik sudah dibahas, terdapat aspek spesifik (kinerja, metode, atau konteks) yang belum terjawab atau tidak efektif untuk diimplementasikan.  Bagaimana cara membuktikan bahwa sebuah celah benar-benar ada?
+Dengan cara pemetaan literatur (Mapping). Kita harus menunjukkan bahwa hasil riset terdahulu memiliki batasan (limitasi) yang konsisten, dan dengan memberikan argumen logis bahwa kondisi saat ini (misalnya: SPBE 4.0) berbeda dengan kondisi saat penelitian terdahulu dilakukan, sehingga penelitian baru diperlukan untuk menutup celah tersebut.  
