@@ -93,8 +93,8 @@ Pilih satu paper riset di bidang TI yang mengklaim "metode X meningkatkan perfor
 > **Contoh domain TI:** "Deteksi anomali lalu-lintas jaringan menggunakan CNN — akurasi meningkat 94% vs baseline SVM 87%." Distorsi potensial: apakah dataset normal/anomali seimbang? Apakah hanya diuji pada satu vendor traffic?
 
 **Paper yang dipilih:**
-> Judul: _______________________________________________
-> Penulis (Tahun): ______________________________________
+> Judul: _Keamanan Siber dalam Transformasi Digital Pelayanan Publik di Indonesia
+> Penulis (Tahun): _Muhammad Alfi Fadhlurrahman, Ni Putu Yundari, Ahnaf Tsaqif Firdaus (2023)_____________________________________
 > Sumber/Link DOI: _____________________________________
 
 | Tahap | Apa yang Dilakukan | Potensi Distorsi |
