@@ -103,24 +103,24 @@ Hypothesis Pair:
 
 Gunakan gap yang ditemukan di WS-03. Transformasikan menjadi Research Question.
 
-**Gap dari WS-03:** ____________________________________
+**Gap dari WS-03:** Belum adanya model mitigasi risiko keamanan siber yang seragam dan terintegrasi untuk mendukung interoperabilitas data antar instansi pada "Satu Data Indonesia" di tingkat Pemerintah Daerah.____________________________________
 
 **RQ versi pertama (tulis bebas):**
-> ___________________________________________________
+> Bagaimana cara membuat sistem keamanan siber yang aman untuk pelayanan publik di daerah agar tidak diretas?___________________________________________________
 
 **Evaluasi RQ:**
 
 | Komponen | Ada? | Isi |
 |----------|------|-----|
-| Metode spesifik | *Contoh: Ya — CNN vs RF* | |
-| Metrik terukur | | |
-| Baseline | | |
-| Dataset/konteks | | |
+| Metode spesifik | Tidak |Masih terlalu umum |
+| Metrik terukur |Tidak |Tidak ada tolok ukur keberhasilan |
+| Baseline |Tidak |Tidak ada pembanding   |
+| Dataset/konteks |Ya |Pelayanan publik di daerah |
 
-**Tipe RQ:** [ ] Comparison / [ ] Improvement / [ ] Exploratory
+**Tipe RQ:** [ ] Comparison / [ ] Improvement / [ x] Exploratory
 
 **RQ versi revisi (setelah evaluasi):**
-> ___________________________________________________
+> "Bagaimana efektivitas kerangka kerja tata kelola keamanan siber berbasis standar ISO 27001 dibandingkan dengan praktik mandiri yang saat ini digunakan dalam memitigasi risiko kebocoran data pada sistem pelayanan publik di pemerintah daerah?"___________________________________________________
 
 ---
 
@@ -130,14 +130,14 @@ Rumuskan pasangan hipotesis dari RQ di Latihan 1.
 
 | Komponen | Isi |
 |----------|-----|
-| H₀ | *Contoh: Tidak ada perbedaan signifikan F1-Score antara CNN dan RF pada dataset CIC-MalMem-2022* |
-| H₁ | |
-| Metrik | |
-| Threshold | |
-| Justifikasi threshold | |
+| H₀ | Tidak ada perbedaan signifikan dalam tingkat insiden keamanan data antara pemerintah daerah yang menerapkan ISO 27001 dengan yang tidak. |
+| H₁ |Penerapan kerangka kerja ISO 27001 secara signifikan menurunkan frekuensi insiden kebocoran data dibandingkan dengan praktik mandiri. |
+| Metrik |Jumlah insiden kebocoran data (per kuartal) dan Indeks Kematangan SPBE. |
+| Threshold |Penurunan sebesar 30% dari tingkat insiden dasar (baseline). |
+| Justifikasi threshold |Berdasarkan standar rata-rata peningkatan efisiensi keamanan siber pada organisasi sektor publik yang telah mengadopsi standarisasi tata kelola. |
 
-**Apakah hipotesis ini falsifiable?** [ ] Ya / [ ] Tidak
-> Bagaimana cara membuktikannya salah? ___________________
+**Apakah hipotesis ini falsifiable?** [ x] Ya / [ ] Tidak
+> Bagaimana cara membuktikannya salah? Jika setelah penerapan ISO 27001, jumlah insiden kebocoran data justru meningkat atau tidak berubah secara statistik signifikan dibandingkan sebelum penerapan.___________________
 
 ---
 
@@ -147,14 +147,14 @@ Lengkapi rantai dari RQ hingga metode analisis.
 
 | Tahap | Isi |
 |-------|-----|
-| RQ | *Contoh: Apakah CNN menghasilkan F1-Score lebih tinggi dari RF...* |
-| Variable (IV) | *Contoh: Jenis algoritma (CNN vs RF)* |
-| Variable (DV) | |
-| Metric | |
-| Data source | |
-| Analysis method | |
+| RQ | Efektivitas ISO 27001 dalam memitigasi risiko kebocoran data pada layanan publik. |
+| Variable (IV) | Penerapan kerangka kerja ISO 27001 (Ya/Tidak). |
+| Variable (DV) |Tingkat insiden keamanan data (Kebocoran data). |
+| Metric |Frekuensi insiden per tahun dan skor kematangan keamanan siber (BSSN). |
+| Data source |Laporan insiden BSSN dan kuesioner audit mandiri instansi pemerintah. |
+| Analysis method |Uji beda statistik (T-Test) atau Analisis komparatif deskriptif. |
 
-**Apakah rantai lengkap?** [ ] Ya / [ ] Tidak
+**Apakah rantai lengkap?** [x ] Ya / [ ] Tidak
 > Jika tidak, tahap mana yang perlu direvisi? ______________
 
 ---
@@ -163,6 +163,6 @@ Lengkapi rantai dari RQ hingga metode analisis.
 
 > Ambil satu judul skripsi/paper yang pernah dibaca. Coba ekstrak RQ-nya. Apakah RQ tersebut memenuhi semua komponen (metode, metrik, baseline, konteks)? Jika tidak, apa yang hilang?
 
-**Judul:** _____________________________________________
-**RQ yang diekstrak:** __________________________________
-**Komponen yang hilang:** _______________________________
+**Judul:** "Analisis Risiko Keamanan Siber dalam Transformasi Digital Pelayanan Publik di Indonesia" (Alfi et al., 2023)._____________________________________________
+**RQ yang diekstrak:** (Secara implisit) "Bagaimana risiko keamanan siber dalam transformasi digital pelayanan publik dan bagaimana strategi mitigasinya?"__________________________________
+**Komponen yang hilang:**RQ pada makalah tersebut bersifat sangat eksploratif (kualitatif). Komponen yang hilang adalah Baseline (apa standar keamanan saat ini yang dibandingkan?) dan Metrik terukur (bagaimana kuantifikasi "keamanan" tersebut?). Karena makalah ini bersifat studi strategi, RQ-nya lebih fokus pada deskripsi masalah daripada pengukuran performa, yang membuat evaluasinya sulit jika hanya menggunakan metrik teknis. _______________________________
