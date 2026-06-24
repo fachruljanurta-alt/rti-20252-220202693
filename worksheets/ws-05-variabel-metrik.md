@@ -87,15 +87,15 @@ Alignment Check:
 
 Gunakan RQ dari WS-04. Definisikan variabel dan metriknya.
 
-**RQ:** __________________________________________________
+**RQ:** "Bagaimana efektivitas kerangka kerja tata kelola keamanan siber berbasis standar ISO 27001 dibandingkan dengan praktik mandiri dalam memitigasi risiko kebocoran data pada sistem pelayanan publik di pemerintah daerah?"__________________________________________________
 
 | Variabel | Tipe | Konsep Abstrak | Metrik Konkret | Skala (NOIR) | Satuan |
 |----------|------|---------------|----------------|-------------|--------|
-| *Contoh: Jenis model* | *IV* | *Pendekatan klasifikasi* | *Categorical: CNN vs RF* | *Nominal* | *—* |
-| | DV | | | | |
-| | CV | | | | |
+| Metode Tata Kelola | IV | Strategi keamanan |Kategorikal (ISO 27001 vs Mandiri) | Nomnal | — |
+|Kejadia Kebocoran | DV |Tingkat keamanan Data |Jumlah insiden kebocoran terverifikasi |Rasio |Jumlah(unit) |
+|Kapasitas SDM | CV |Kompetensi Teknis|Skor hasil audit/kuesioner mandiri |Ordinal |Skala Likert |
 
-**Apakah ada lompatan logis dalam rantai?** [ ] Ya / [ ] Tidak
+**Apakah ada lompatan logis dalam rantai?** [ ] Ya / [x  ] Tidak
 > Jika ya, di mana? ____________________________________
 
 ---
@@ -106,15 +106,15 @@ Evaluasi metrik DV yang dipilih di Latihan 1 menggunakan 3 kriteria.
 
 | Kriteria | Skor (1-5) | Justifikasi |
 |----------|-----------|-------------|
-| Representative | *Contoh: 4 — F1-Score mewakili keseimbangan precision-recall* | |
-| Sensitive | | |
-| Feasible | | |
+| Representative | 5 |Jumlah insiden kebocoran data adalah indikator langsung dari kegagalan sistem keamanan. |
+| Sensitive | 4|Metrik ini mampu mendeteksi perubahan kecil jika pelaporan insiden dilakukan secara real-time. |
+| Feasible | 3|Tergantung pada transparansi instansi pemerintah dalam melaporkan insiden (seringkali tertutup). |
 
-**Apakah perlu secondary metric?** [ ] Ya / [ ] Tidak
-> Jika ya, apa dan mengapa? _____________________________
+**Apakah perlu secondary metric?** [x ] Ya / [ ] Tidak
+> Jika ya, apa dan mengapa? Indeks Kematangan SPBE (domain keamanan). Metrik ini penting untuk memvalidasi apakah rendahnya insiden disebabkan oleh ISO 27001 atau karena sistem yang memang belum terintegrasi (sehingga tidak ada data untuk dicuri)._____________________________
 
 **Contoh kasus ceiling effect untuk metrik ini:**
-> ___________________________________________________
+> ___Jika instansi memiliki infrastruktur yang sangat tertutup (air-gapped) atau tidak memiliki exposure akses publik sama sekali, insiden mungkin mencapai angka nol secara alami, sehingga efektivitas ISO 27001 menjadi tidak terlihat perbedaannya dengan praktik mandiri.________________________________________________
 
 ---
 
@@ -124,10 +124,10 @@ Bayangkan data yang akan dikumpulkan dari eksperimen. Evaluasi 4 dimensi kualita
 
 | Dimensi | Pertanyaan | Jawaban | Strategi Mitigasi |
 |---------|-----------|---------|------------------|
-| Completeness | *Apakah semua data point terkumpul?* | | |
-| Consistency | *Apakah ada kontradiksi internal?* | | |
-| Validity | *Apakah benar-benar mengukur yang dimaksud?* | | |
-| Representativeness | *Apakah sampel mewakili populasi target?* | | |
+| Completeness | *Apakah semua data point terkumpul?* |Belum tentu, ada risiko instansi tidak melaporkan insiden. |Menggunakan laporan pihak ketiga atau data agregat dari BSSN. |
+| Consistency | *Apakah ada kontradiksi internal?* |Mungkin ada perbedaan definisi "insiden" antar instansi. |Membuat kriteria baku "insiden" di awal kuesioner audit. |
+| Validity | *Apakah benar-benar mengukur yang dimaksud?* |Insiden bisa terjadi bukan karena tata kelola, tapi human error. |Menambahkan variabel kontrol (kualifikasi SDM). |
+| Representativeness | *Apakah sampel mewakili populasi target?* |Seringkali hanya instansi "sukses" yang mau ikut riset. |Melakukan random sampling pada daerah dengan berbagai tingkat maturitas SPBE. |
 
 ---
 
@@ -136,5 +136,5 @@ Bayangkan data yang akan dikumpulkan dari eksperimen. Evaluasi 4 dimensi kualita
 > Mengapa memilih metrik setelah melihat data dianggap p-hacking? Apa bedanya dengan eksplorasi data yang sah?
 
 **Jawaban:**
-> ___________________________________________________
+> Memilih metrik setelah melihat data dianggap p-hacking karena peneliti cenderung mencari metrik yang menghasilkan nilai signifikansi statistik ($p < 0.05$) daripada menguji kebenaran hipotesis secara objektif. Ini adalah bentuk manipulasi hasil (cherry-picking).Bedanya dengan eksplorasi data yang sah: Eksplorasi data yang sah dilakukan untuk memahami distribusi, korelasi, dan karakteristik data sebelum melakukan inferensi statistik (untuk merumuskan hipotesis baru), bukan untuk mengubah metrik demi memaksa hasil yang diinginkan (signifikansi). Eksplorasi yang sah bersifat terbuka dan jujur mengenai keterbatasan data, sedangkan p-hacking bersifat manipulatif untuk mencapai klaim kebaruan yang tidak valid.___________________________________________________
 > ___________________________________________________
