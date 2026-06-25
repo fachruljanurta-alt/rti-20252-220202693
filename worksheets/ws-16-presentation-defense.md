@@ -121,17 +121,17 @@ Rencanakan presentasi 15 menit untuk riset Anda.
 
 | # | Pesan Utama | Visual yang Digunakan | Waktu |
 |---|-------------|----------------------|-------|
-| 1 | *Contoh: Judul + konteks — rekomendasi vs kepuasan* | *Title slide, gambar sistem* | *1 min* |
-| 2 | *Contoh: Problem — RMSE tinggi tapi satisfaction rendah (45/100)* | *Bar chart: satisfaction vs RMSE per sistem* | *2 min* |
-| 3 | *Contoh: Gap + RQ — belum ada CF+context untuk satisfaction* | *Tabel gap literatur* | *1.5 min* |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
+| 1 | Judul, Penulis, & Latar Belakang Transformasi Digital | Title slide, logo instansi/UI | 1 min |
+| 2 | Fenomena: Lonjakan serangan siber vs Rendahnya maturitas SPBE | Infografis data BSSN & Indeks SPBE | 2 min |
+| 3 | Gap: Kesenjangan tata kelola antar-instansi daerah | Peta/Grafik disparitas antar-daerah | 1.5 min |
+| 4 |RQ: Efektivitas ISO 27001 dalam memitigasi risiko | Diagram alur RQ dan tujuan riset|1 |
+| 5 |Metodologi: Pendekatan studi komparatif (ISO vs Mandiri) | Flowchart desain eksperimen|2 |
+| 6 | Temuan Utama: Dampak penerapan tata kelola terhadap insiden| Bar chart: penurunan insiden siber|3 |
+| 7 |Diskusi: Peran krusial SDM & hambatan birokrasi |Foto/Ikon SDM, box tantangan |2.5 |
+| 8 | Kesimpulan & Implikasi Kebijakan|Bullet points poin-poin kunci |1 |
+| 9 | Sesi Tanya Jawab (Q&A)| Slide penutup "Terima Kasih"| 1|
 
-**Total waktu estimasi:** ____ menit
+**Total waktu estimasi:** ___15_ menit
 
 ---
 
@@ -139,13 +139,11 @@ Rencanakan presentasi 15 menit untuk riset Anda.
 
 Prediksi 5 pertanyaan yang mungkin diajukan penguji, lalu siapkan jawaban CER.
 
-| # | Kategori | Pertanyaan | Claim | Evidence | Reasoning |
-|---|----------|-----------|-------|----------|-----------|
-| 1 | *Problem* | *Contoh: Mengapa fokus kepuasan, bukan akurasi?* | *Akurasi tinggi tidak menjamin kepuasan* | *Survey: 45/100 satisfaction meski RMSE 0.87* | *Gap antara metrik teknis dan pengalaman pengguna* |
-| 2 | *Method* | *Contoh: Mengapa hanya 3 dataset?* | *3 dataset mewakili variasi: small-clean, medium-clean, medium-noisy* | *Tabel karakteristik dataset di Bab Method* | *Generalisasi perlu validasi lanjut — tercatat sebagai limitasi* |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| # | Pertanyaan | Claim | Evidence | Reasoning |
+|---|----------|-------|----------|-----------|
+| 1 |  Mengapa ISO 27001? Bukankah itu standar industri, bukan pemerintah? | ISO 27001 adalah best practice internasional yang universal. | Riset Alfi et al. (2023) menunjukkan standar ini efektif untuk interoperabilitas data. | Tata kelola yang terstandar meminimalisir human error yang menjadi celah utama serangan siber. |
+| 2 | Apakah data insiden siber cukup valid mengingat banyak instansi tidak melapor? | Validitas data ditingkatkan melalui triangulasi dengan BSSN. |  Audit mandiri instansi dibandingkan dengan laporan resmi BSSN | Perbedaan data mencerminkan gap pelaporan yang juga menjadi temuan riset ini. |
+| 3 |Bagaimana jika disparitas anggaran antar-daerah menjadi variabel pengganggu? |Anggaran bukan variabel tunggal penentu keamanan. |Data menunjukkan daerah dengan anggaran terbatas tetap bisa aman dengan SOP yang baik. |  `Tata kelola (kebijakan) seringkali lebih murah dan efektif daripada sekadar investasi perangkat mahal.|
 
 ---
 
@@ -154,15 +152,15 @@ Prediksi 5 pertanyaan yang mungkin diajukan penguji, lalu siapkan jawaban CER.
 Minta teman/kolega mengajukan 3 pertanyaan tentang riset Anda. Catat pertanyaan dan evaluasi jawaban Anda.
 
 | # | Pertanyaan | Jawaban Saya | Evaluasi |
-|---|-----------|-------------|---------|| *1* | *Contoh: "Mengapa tidak membandingkan dengan metode Y?"* | *Contoh: "Karena Y memerlukan dataset labeled yang tidak tersedia. Disebutkan sebagai limitasi di halaman X."* | *[✓] Direct [✓] Data-based [✓] Honest* || 1 | | | [ ] Direct [ ] Data-based [ ] Honest |
-| 2 | | | [ ] Direct [ ] Data-based [ ] Honest |
-| 3 | | | [ ] Direct [ ] Data-based [ ] Honest |
+|---|-----------|-------------|---------|| *1* | "Apa yang dilakukan jika instansi menolak transparan?" | "Kami menggunakan data agregat BSSN sebagai validasi silang (triangulasi) untuk memitigasi reporting bias." | [✓] Direct [✓] Data-based [✓] Honest|
+| 2 |"Apakah riset ini bisa diterapkan di sektor swasta?" |"Bisa, namun fokus kebijakan SPBE di sini spesifik untuk konteks tata kelola pemerintahan." | [✓] Direct [✓] Data-based [✓] Honest |
+| 3 | "Apakah ISO 27001 menjamin keamanan 100%?"| "Tidak ada sistem yang 100% aman; ISO 27001 adalah proses mitigasi risiko yang berkelanjutan (PDCA)."| [✓] Direct [✓] Data-based [✓] Honest|
 
 **Pertanyaan yang paling sulit dijawab:**
-> ___________________________________________________
+> ___________________________________________________"Bagaimana membedakan antara serangan siber yang sukses karena sistem lemah atau karena memang serangan tersebut sangat canggih?"
 
 **Apa yang perlu disiapkan lebih baik:**
-> ___________________________________________________
+> ______________________________________________Penjelasan tentang Threat Modeling dan Post-Incident Analysis untuk membedakan antara kegagalan kontrol keamanan dasar vs serangan Zero-Day._____
 
 ---
 
@@ -171,7 +169,7 @@ Minta teman/kolega mengajukan 3 pertanyaan tentang riset Anda. Catat pertanyaan 
 > Dari seluruh proses WS-01 sampai WS-16 — dari paradigma riset hingga presentasi — bagian mana yang paling mengubah cara Anda berpikir tentang riset? Apa satu hal yang akan selalu Anda terapkan di riset berikutnya?
 
 **Insight terbesar:**
-> ___________________________________________________
+> Riset bukanlah upaya mencari kebenaran mutlak, melainkan upaya memperkecil ketidakpastian melalui metodologi yang terstruktur dan argumen yang jujur. Bagian paling mengubah pikiran adalah operationalization chain — ternyata mendefinisikan metrik dengan presisi jauh lebih sulit daripada sekadar membaca data.___________________________________________________
 
 **Yang akan selalu diterapkan:**
-> ___________________________________________________
+>Prinsip Ablation/Modularity. Sebelum membangun sistem atau kebijakan, saya akan selalu membedah bagian mana yang paling memberikan dampak agar riset/solusi saya selalu berbasis data (evidence-based), bukan sekadar asumsi "fitur lengkap". ___________________________________________________
