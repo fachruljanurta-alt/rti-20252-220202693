@@ -107,15 +107,15 @@ Experimental Setup:
 
 Gunakan RQ dan variabel dari WS-05. Petakan ke komponen sistem.
 
-**RQ:** __________________________________________________
+**RQ:** _"Bagaimana efektivitas kerangka kerja tata kelola keamanan siber berbasis standar ISO 27001 dibandingkan dengan praktik mandiri dalam memitigasi risiko kebocoran data pada sistem pelayanan publik di pemerintah daerah?"_________________________________________________
 
 | Variabel | Tipe | Komponen Sistem | Cara Manipulasi / Pengukuran |
 |----------|------|-----------------|---------------------------|
-| *Contoh: Jenis model* | *IV* | *Modul classifier (swap RF ↔ CNN)* | *Ganti config `model_type`* |
-| | DV | | |
-| | CV | | |
+| Metode Tata Kelola| IV | Modul Kebijakan (ISO 27001 vs Mandiri) | Implementasi standar operasional prosedural (SOP) sesuai ISO 27001. |
+| Kejadian Kebocoran| DV |SIstem Monitoring Kemananan |Pencatatan jumlah alert atau kebocoran data terverifikasi.   |
+|Kapasitas SDM | CV |Modul Pelatihan/Edukasi |Skor kuesioner pemahaman keamanan siber bagi ASN. |
 
-**Apakah semua variabel bisa di-map?** [ ] Ya / [ ] Tidak
+**Apakah semua variabel bisa di-map?** [x ] Ya / [ ] Tidak
 > Jika tidak, komponen apa yang perlu ditambahkan? _________
 
 ---
@@ -126,14 +126,14 @@ Evaluasi desain sistem terhadap 4 prinsip.
 
 | Prinsip | Status | Bukti / Penjelasan |
 |---------|--------|-------------------|
-| Traceability | *Contoh: ✅ — setiap modul punya label variabel* | |
-| Modularity | | |
-| Controllability | | |
-| Measurability | | |
+| Traceability | ✅  |Setiap kebijakan keamanan dapat dilacak hubungannya dengan insiden data yang muncul.   |
+| Modularity |✅ | Kebijakan (SOP) dan Monitoring sistem dipisahkan agar bisa diuji secara terpisah.  |
+| Controllability |✅ | Manipulasi variabel dapat dilakukan melalui perubahan SOP di instansi terkait.  |
+| Measurability | ✅| Insiden dapat diukur jumlahnya melalui laporan siber nasional.  |
 
-**Prinsip mana yang paling sulit dipenuhi?** _______________
+**Prinsip mana yang paling sulit dipenuhi?** Controllability_______________
 **Strategi untuk mengatasinya:**
-> ___________________________________________________
+>Menggunakan studi kasus komparatif antar-instansi daerah yang memiliki karakteristik serupa sehingga variabel luar dapat dikontrol melalui pemilihan sampel yang setara.   ___________________________________________________
 
 ---
 
@@ -146,14 +146,14 @@ Jika sistem memiliki 3 komponen utama, rencanakan ablation study.
 
 | Kondisi | Komponen A | Komponen B | Komponen C | Hasil yang Diharapkan |
 |---------|-----------|-----------|-----------|----------------------|
-| Full | *Contoh: ✅ CNN* | *Contoh: ✅ Temporal features* | *Contoh: ✅ Z-score norm* | *Baseline penuh* |
-| – A | ❌ (ganti RF) | ✅ | ✅ | |
-| – B | ✅ | ❌ (tanpa temporal) | ✅ | |
-| – C | ✅ | ✅ | ❌ (tanpa normalisasi) | |
+| Full |  ✅  |  ✅  | *✅  | Penurunan insiden maksimal |
+| – A | ❌ (SOP umum) | ✅ | ✅ | Penurunan moderat (kurang standar)|
+| – B | ✅ | ❌ (tanpa training) | ✅ | Insiden tinggi karena human error|
+| – C | ✅ | ✅ | ❌ (Manual log) |Deteksi insiden lambat |
 
-**Komponen mana yang diprediksi paling berkontribusi?** _____
+**Komponen mana yang diprediksi paling berkontribusi?** _Komponen B (Training ASN)____
 **Mengapa?**
-> ___________________________________________________
+> Karena penelitian menunjukkan bahwa salah satu tantangan transformasi digital di Indonesia adalah masalah sumber daya manusia dan pemahaman terkait SOP digitalisasi.
 
 ---
 
@@ -162,5 +162,4 @@ Jika sistem memiliki 3 komponen utama, rencanakan ablation study.
 > Apa risiko jika sistem dibangun seperti produk (monolitik, fitur lengkap) lalu baru dilakukan eksperimen? Mengapa arsitektur modular penting untuk riset?
 
 **Jawaban:**
-> ___________________________________________________
-> ___________________________________________________
+> Risiko membangun sistem seperti produk monolitik sebelum riset adalah "Black Box Effect"; kita mungkin mendapatkan hasil kinerja yang baik, namun tidak tahu komponen mana yang benar-benar memberikan dampak signifikan. Arsitektur modular sangat penting untuk riset karena memungkinkan peneliti melakukan isolasi variabel untuk membuktikan klaim secara saintifik, sehingga hasil riset tidak hanya menjawab "apakah berhasil?", tetapi juga "mengapa dan bagian mana yang berhasil?" yang krusial untuk rekomendasi kebijakan.
