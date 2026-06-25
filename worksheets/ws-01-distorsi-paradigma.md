@@ -95,21 +95,21 @@ Pilih satu paper riset di bidang TI yang mengklaim "metode X meningkatkan perfor
 **Paper yang dipilih:**
 > Judul: _Keamanan Siber dalam Transformasi Digital Pelayanan Publik di Indonesia
 > Penulis (Tahun): _Muhammad Alfi Fadhlurrahman, Ni Putu Yundari, Ahnaf Tsaqif Firdaus (2023)_____________________________________
-> Sumber/Link DOI: _____________________________________
+> Sumber/Link DOI: https://scholarhub.ui.ac.id/jkskn/vol6/iss2/5_____________________________________
 
 | Tahap | Apa yang Dilakukan | Potensi Distorsi |
 |-------|-------------------|-----------------|
-| Reality → Data | *Contoh: Kumpulkan log server 30 hari* | *Contoh: Hanya ambil jam sibuk* |
-| Data → Processing | | |
-| Processing → Analysis | | |
-| Analysis → Inference | | |
-| Inference → Knowledge | | |
+| Reality → Data | Mengumpulkan data serangan siber dari laporan BSSN dan kasus publik.   | Data serangan yang tercatat mungkin hanya puncak gunung es; banyak serangan tidak terdeteksi atau tidak dilaporkan.   |
+| Data → Processing |Mengolah data dari berbagai sektor (Kesehatan, Keuangan, Pemerintahan).   | Pengelompokan sektor yang luas dapat mengaburkan perbedaan spesifik tingkat kerentanan teknis di tiap lembaga|
+| Processing → Analysis |Menganalisis peran stakeholder (Pemerintah Pusat, Daerah, ASN).   | Analisis bisa bias jika hanya fokus pada perspektif kebijakan formal, mengabaikan realita teknis di lapangan.|
+| Analysis → Inference |Menyimpulkan perlunya tiga pilar (teknologi, manusia, tata kelola).   |Inferensi mungkin terlalu menggeneralisasi solusi yang sama untuk semua instansi yang memiliki infrastruktur berbeda. |
+| Inference → Knowledge |Merekomendasikan strategi mitigasi untuk ketahanan nasional |Rekomendasi kebijakan mungkin sulit dieksekusi jika kesenjangan anggaran antar daerah tidak dipertimbangkan.   |
 
-**Distorsi paling besar di tahap:** ________________________
+**Distorsi paling besar di tahap:** ___________________ Realita → Data.  _____
 
 **Dua distorsi spesifik yang teridentifikasi:**
-1. ___________________________________________________
-2. ___________________________________________________
+1. ___________________________________________________ Reporting Bias: Data yang digunakan sangat bergantung pada laporan resmi (BSSN), yang mungkin tidak mencakup serangan pada sektor swasta atau sistem kecil yang tidak memiliki kapasitas pelaporan.  
+2. ___________________________________________________Selection Bias: Fokus pada kasus-kasus besar (misal: kebocoran BPJS, peretasan situs DPR) menciptakan persepsi bahwa ancaman hanya terjadi pada level makro, padahal kerentanan pada sistem daerah sering terabaikan.  
 
 ---
 
@@ -119,29 +119,29 @@ Skenario: Seorang peneliti menemukan bahwa jika 3 data point outlier dihapus, ha
 
 | Perspektif | Analisis |
 |------------|---------|
-| Kejujuran ilmiah | *Contoh: Laporkan kedua versi (dengan dan tanpa outlier)* |
-| Transparansi | |
-| Peer review | |
+| Kejujuran ilmiah | Peneliti harus melaporkan data apa adanya. Menghapus data hanya untuk mendapatkan hasil yang signifikan adalah bentuk manipulasi yang menyesatkan pembaca.  |
+| Transparansi | jika outlier dihapus, peneliti wajib memberikan alasan teknis yang valid (misalnya kesalahan sensor) dan menyajikan hasil dengan dan tanpa data tersebut.  |
+| Peer review | Reviewer harus dapat mengevaluasi apakah penghapusan tersebut didasarkan pada metodologi yang benar atau hanya upaya "mencari signifikansi" (p-hacking).  |
 
 **Keputusan akhir dan justifikasi:**
-> ___________________________________________________
+> ___________________________________Jangan menghapus data tanpa justifikasi metodologis yang transparan. Laporkan hasil analisis dengan menyertakan data outlier tersebut. Jika hasil tetap tidak signifikan, kejujuran ini lebih bernilai bagi sains daripada hasil signifikan yang didapat dari manipulasi data. Peneliti harus menekankan pada keterbatasan sistem yang diteliti daripada memaksakan klaim keberhasilan.  ________________
 
 ---
 
 ## Latihan 3 — Posisi Paradigma
 
-**Topik riset:** ________________________________________
+**Topik riset:** Analisis Risiko Keamanan Siber dalam Transformasi Digital Pelayanan Publik.________________________________________
 
 > **Skala 1–5:** 1 = tidak sesuai sama sekali dengan topik ini, 5 = sangat sesuai dan dominan digunakan pada riset bertopik serupa.
 
 | Kriteria | Positivis | Interpretivis | Design Science |
 |----------|-----------|---------------|----------------|
-| Kesesuaian dengan topik (1–5) | *Contoh: 4 — topik kuantitatif, cocok uji hipotesis* | *Contoh: 2 — topik tidak studi makna/konteks* | *Contoh: 5 — membangun artefak untuk uji klaim* |
-| Jenis data yang dikumpulkan | *Metrik numerik, log eksperimen* | *Wawancara, observasi kualitatif* | *Hasil uji artefak, komparasi kinerja* |
-| Limitasi paradigma | | | |
+| Jenis data | Metrik serangan, data sekunder | Analisis peran/kebijakan| Kerangka mitigasi |
+| Fokus | Pengukuran resiko | Log Kebijakan |Strategi Perubahan |
+| Hasil |Pola ancaman |Perspektif Stakeholder |Rekomendasi tata Pola |
 
-**Paradigma yang dipilih:** _____________________________
-**Alasan:** ____________________________________________
+**Paradigma yang dipilih:**Design Scienece _____________________________
+**Alasan:** ______________________________Penelitian ini bertujuan untuk menghasilkan rekomendasi kebijakan dan kerangka strategi mitigasi (artefak) untuk memperkuat ketahanan nasional di era digital, bukan sekadar menjelaskan fenomena.  ______________
 
 ---
 
@@ -150,5 +150,6 @@ Skenario: Seorang peneliti menemukan bahwa jika 3 data point outlier dihapus, ha
 > Sebelum membaca materi ini, apakah pernah mempertanyakan klaim "95% akurat"? Setelah memahami rantai distorsi, pertanyaan apa yang sekarang akan diajukan saat membaca paper?
 
 **Jawaban:**
-> ___________________________________________________
+> Sebelum membaca: Mungkin pernah menganggap angka "370,02 juta serangan siber" adalah kebenaran mutlak tanpa mempertanyakan bagaimana data tersebut dikumpulkan dan diklasifikasikan.
+> Pertanyaan setelah memahami rantai distorsi:"Apakah angka statistik serangan ini mencakup semua jenis ancaman, atau hanya jenis tertentu yang terdeteksi oleh sensor BSSN?"  "Bagaimana kualitas data yang digunakan sebagai dasar kebijakan, mengingat hanya 2,89% instansi yang memiliki implementasi SPBE dengan predikat sangat baik?"  ___________________________________________________
 > ___________________________________________________
