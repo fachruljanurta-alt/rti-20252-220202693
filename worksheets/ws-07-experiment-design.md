@@ -106,13 +106,13 @@ Statistical Plan:
 
 Susun desain eksperimen berdasarkan RQ, variabel, dan sistem dari WS-04 sampai WS-06.
 
-**RQ:** __________________________________________________
-**Tipe eksperimen:** [ ] Comparison / [ ] Ablation / [ ] Parameter
+**RQ:**"Bagaimana efektivitas kerangka kerja tata kelola keamanan siber berbasis standar ISO 27001 dibandingkan dengan praktik mandiri dalam memitigasi risiko kebocoran data pada sistem pelayanan publik di pemerintah daerah?" __________________________________________________
+**Tipe eksperimen:** [x ] Comparison / [ ] Ablation / [ ] Parameter
 
 | Kondisi | Deskripsi | IV Value | CV Settings |
 |---------|-----------|----------|-------------|
-| Control | *Contoh: RF baseline dari literatur* | *RF* | *Dataset X, 80:20 split, seed 42* |
-| Treatment | | | |
+| Control | Praktik keamanan siber mandiri (tanpa standar baku) | Praktik Mandiri | Infrastruktur daerah (tipe A), SDM tingkat menengah |
+| Treatment |Penerapan standar ISO 27001 (SOP, Audit, Monitoring) |ISO 27001 | Infrastruktur daerah (tipe A), SDM tingkat menengah|
 
 ---
 
@@ -122,13 +122,13 @@ Evaluasi apakah desain eksperimen di Latihan 1 sudah fair.
 
 | Kriteria | Status | Detail |
 |----------|--------|--------|
-| Dataset identik | *Contoh: ✅ — sama-sama pakai CIC-MalMem-2022* | |
-| Preprocessing setara | | |
-| Tuning effort setara | | |
-| Environment identik | | |
-| Metrik evaluasi sama | | |
+| Dataset identik |  ✅  | Data insiden diambil dari periode waktu (2022-2023) yang sama.|
+| Preprocessing setara |✅ | Kategorisasi "jenis insiden" diseragamkan untuk kedua kondisi.|
+| Tuning effort setara | ✅|Keduanya diuji pada organisasi pemerintah dengan skala infrastruktur serupa. |
+| Environment identik |✅ | Lingkungan birokrasi dan skala pelayanan publik setara.|
+| Metrik evaluasi sama |✅ |Menggunakan frekuensi insiden dan skor kematangan keamanan siber. |
 
-**Ada yang tidak fair?** [ ] Ya / [ ] Tidak
+**Ada yang tidak fair?** [ ] Ya / [x ] Tidak
 > Jika ya, bagaimana cara memperbaikinya? ________________
 
 ---
@@ -139,14 +139,14 @@ Identifikasi ancaman validitas untuk desain eksperimen ini.
 
 | Threat Type | Ancaman Spesifik | Mitigasi |
 |-------------|-----------------|----------|
-| Internal | *Contoh: Data leakage antara train-test* | *Contoh: Gunakan stratified split, validasi tidak ada overlap* |
-| External | | |
-| Construct | | |
-| Conclusion | | |
+| Internal | Variasi kualitas SDM antar instansi daerah. | Gunakan variabel kontrol (usia/tingkat pendidikan/pelatihan IT ASN). |
+| External |Perbedaan jenis ancaman siber yang diterima tiap daerah. | Gunakan data agregat BSSN yang dikategorikan berdasarkan jenis serangan.|
+| Construct |"Insiden" mungkin tidak dilaporkan di daerah yang kurang sistematis. |Validasi data dengan audit pihak ketiga (BSSN) sebagai pembanding. |
+| Conclusion |Jumlah sampel instansi yang terbatas untuk generalisasi nasional. |Memperbanyak jumlah sampel instansi (minimal 20-30 daerah). |
 
-**Ancaman mana yang paling sulit dimitigasi?** _____________
+**Ancaman mana yang paling sulit dimitigasi?**Construct Ability _____________
 **Mengapa?**
-> ___________________________________________________
+> Karena di Indonesia, terdapat budaya reluctance to report (keengganan melaporkan) atas kegagalan sistem keamanan di tingkat instansi pemerintah karena takut sanksi atau citra buruk. Hal ini membuat data yang tersedia tidak selalu mencerminkan realitas.___________________________________________________
 
 ---
 
@@ -155,6 +155,6 @@ Identifikasi ancaman validitas untuk desain eksperimen ini.
 > Sebuah paper melaporkan "metode kami mengalahkan semua baseline." Apa 3 pertanyaan pertama yang harus diajukan untuk mengevaluasi klaim ini?
 
 **Jawaban:**
-1. ___________________________________________________
-2. ___________________________________________________
-3. ___________________________________________________
+1. _"Apakah kondisi eksperimen (tuning, dataset, hardware) benar-benar setara bagi metode Anda dan baseline?" (Untuk memastikan tidak ada keunggulan buatan).__________________________________________________
+2."Apakah baseline yang digunakan sudah merupakan SOTA (State of the Art) terbaru, atau hanya baseline usang yang mudah dikalahkan?" (Untuk memastikan validitas perbandingan). ___________________________________________________
+3. "Apakah signifikansi statistik diuji dengan benar, atau hanya kebetulan pada satu titik evaluasi saja?" (Untuk memastikan hasil bukan karena keberuntungan/kebetulan data).___________________________________________________
