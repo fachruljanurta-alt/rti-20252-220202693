@@ -116,13 +116,13 @@ Buat outline paper untuk riset Anda menggunakan struktur IMRAD.
 
 | Section | Konten Utama (2-3 kalimat) | Target Kata |
 |---------|---------------------------|------------|
-| Abstract | *Contoh: Sistem rekomendasi memiliki akurasi tinggi tapi satisfaction rendah. Studi ini menguji CF+context signal. Hasil: satisfaction naik 38% tanpa penurunan RMSE signifikan.* | 200-250 |
-| Introduction | *Contoh: Konteks: gap antara akurasi dan kepuasan pengguna. Gap: tidak ada studi yang mengkombinasikan CF+context. RQ: apakah CF+context meningkatkan satisfaction?* | 500-700 |
-| Related Work | | 700-1000 |
-| Method | | 800-1200 |
-| Results | | 500-800 |
-| Discussion | | 600-900 |
-| Conclusion | | 200-400 |
+| Abstract | Transformasi digital SPBE di Indonesia menghadapi tantangan kerentanan data yang tinggi. Studi ini mengevaluasi efektivitas penerapan ISO 27001 dibandingkan praktik mandiri dalam memitigasi insiden kebocoran. Hasil menunjukkan penurunan insiden signifikan dengan pendekatan tata kelola terstandar. | 250 |
+| Introduction | Latar belakang: Lonjakan serangan siber pada sistem pemerintah. Gap: Kurangnya model mitigasi terintegrasi di tingkat daerah. RQ: Seberapa efektif ISO 27001 dibandingkan praktik mandiri? | 600 |
+| Related Work | Tinjauan kebijakan SPBE, literatur tentang keamanan siber sektor publik, dan kerangka kerja tata kelola TI global/nasional.| 800|
+| Method |Eksperimen komparatif pada pemerintah daerah, mencakup variabel SOP, pelatihan SDM, dan audit teknis sebagai intervensi. | 1000 |
+| Results |Perbandingan statistik frekuensi insiden kebocoran data sebelum dan sesudah intervensi pada kedua kelompok | 600 |
+| Discussion |Analisis mengapa SDM menjadi faktor krusial dan bagaimana hambatan birokrasi mempengaruhi implementasi standar keamanan. | 700 |
+| Conclusion |Kesimpulan bahwa tata kelola terstandar adalah prasyarat wajib untuk ketahanan digital nasional. | 300 |
 
 ---
 
@@ -132,22 +132,19 @@ Buat consistency matrix untuk memverifikasi internal consistency paper Anda.
 
 |  | Intro | Method | Result | Discussion | Conclusion |
 |--|-------|--------|--------|-----------|-----------|
-| *Contoh: RQ1* | *✓* | *✓* | *✓* | *✓* | *✓* |
-| *Contoh: Metrik-X* | *✗ ←* | *✗ ←* | *✓* | *✗ ←* | *✗ ←* |
-| RQ1 | | | | | |
-| RQ2 | | | | | |
-| Metrik utama | | | | | |
-| Variabel IV | | | | | |
-| Variabel DV | | | | | |
-| Klaim/kontribusi | | | | | |
+| RQ1 |✓ |✓ |✓ |✓ | ✓|
+| Metrik utama |✓ |✓ |✓ |✓ |✓ |
+| Variabel IV |✓ |✓ |✓ |- |✓ |
+| Variabel DV | ✓| ✓| ✓| ✓| ✓|
+| Klaim/kontribusi |✓ |X |✓ |✓ |✓ |
 
 **Isi setiap sel:** ✓ (ada & konsisten), ✗ (missing), ~ (ada tapi inkonsisten)
 
 **Inkonsistensi yang ditemukan:**
-> ___________________________________________________
+> Variabel IV pada bagian metode kurang mengeksplorasi kendala birokrasi yang muncul di bagian diskusi.___________________________________________________
 
 **Tindakan perbaikan:**
-> ___________________________________________________
+> ______Menambahkan variabel kontrol atau penjelasan kualitatif di bagian metode tentang hambatan adopsi SOP di pemerintah daerah._____________________________________________
 
 ---
 
@@ -156,16 +153,16 @@ Buat consistency matrix untuk memverifikasi internal consistency paper Anda.
 Ambil satu paragraf dari tulisan Anda (atau tulis paragraf baru) dan evaluasi kualitasnya.
 
 **Paragraf asli:**
-> (tempel paragraf Anda di sini)
+> "Keamanan siber di daerah sangat penting karena banyak peretasan terjadi. Implementasi ISO 27001 akan membuat sistem lebih aman dan hasilnya akan lebih bagus dari praktik yang sudah ada sekarang di instansi tersebut."
 
 | Kriteria | Evaluasi | Perbaikan |
 |----------|---------|-----------|
-| Clarity | *Contoh: kalimat ke-3 ambigu — "performa" bisa berarti accuracy atau speed* | *Ubah menjadi: "accuracy meningkat..."* |
-| Precision | | |
-| Conciseness | | |
+| Clarity | AMBIGU | Gunakan "tingkat insiden menurun".|
+| Precision | "Sangat penting" terlalu subjektif.| Ganti dengan data kerugian atau risiko.|
+| Conciseness |Terlalu banyak kata pengisi. |perbaikan kalmat |
 
 **Paragraf setelah perbaikan:**
-> (tulis paragraf yang sudah diperbaiki)
+> "Penerapan standar ISO 27001 pada sistem pelayanan publik daerah terbukti signifikan menurunkan insiden kebocoran data dibandingkan dengan praktik manajemen keamanan mandiri. Pendekatan terstandar ini memberikan kerangka kerja mitigasi risiko yang lebih terukur dalam menghadapi eskalasi ancaman siber nasional."
 
 ---
 
@@ -173,5 +170,15 @@ Ambil satu paragraf dari tulisan Anda (atau tulis paragraf baru) dan evaluasi ku
 
 > Apa perbedaan antara menulis "tentang" riset dan menulis sebagai "argumen" riset? Bagaimana urutan penulisan (Method → Discussion → Introduction) mengubah kualitas tulisan?
 
-> ___________________________________________________
+> Menulis "tentang" vs "sebagai argumen":
+Menulis "tentang" riset hanyalah melaporkan apa yang dilakukan (deskriptif), sedangkan menulis "sebagai argumen" adalah membangun narasi persuasif yang memposisikan riset Anda sebagai solusi yang diperlukan untuk menutup celah pengetahuan.
+
+Ubah urutan penulisan:
+Urutan Method → Discussion → Introduction sangat disarankan karena:
+
+1.Method & Results memberikan fakta keras sebagai pondasi argumen.
+
+2.Discussion memetakan hasil tersebut ke arah signifikansi yang lebih luas.
+
+3.Introduction ditulis terakhir agar penulis tahu persis "janji" apa yang akan diberikan kepada pembaca berdasarkan hasil riset yang sudah solid, sehingga menghindari mismatch antara klaim di depan dengan hasil di belakang.___________________________________________________
 > ___________________________________________________
