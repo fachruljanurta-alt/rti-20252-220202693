@@ -109,13 +109,13 @@ Kumpulkan hasil dari WS-02 sampai WS-07 menjadi satu ringkasan proposal.
 
 | Komponen | Sumber | Isi (1-2 kalimat) |
 |----------|--------|-------------------|
-| Problem Statement | WS-02 | *Contoh: Sistem rekomendasi memiliki akurasi tinggi (RMSE 0.87) tetapi satisfaction score rendah (45/100). Gap antara metrik teknis dan kepuasan pengguna belum diteliti.* |
-| Gap | WS-03 | *Contoh: Tidak ada studi yang mengintegrasikan collaborative filtering dengan user-context signals untuk meningkatkan satisfaction.* |
-| RQ | WS-04 | *Contoh: Apakah penambahan context-aware signals pada collaborative filtering meningkatkan satisfaction score tanpa menurunkan RMSE?* |
-| Hipotesis | WS-04 | *Contoh: H₁: Sistem CF+context menghasilkan satisfaction ≥ 70/100 dengan RMSE ≤ 0.90 dibanding baseline CF murni.* |
-| Variabel & Metrik | WS-05 | *Contoh: IV = jenis sistem (CF vs CF+context); DV = satisfaction score (skala 0-100) + RMSE (regresi).* |
-| Sistem | WS-06 | |
-| Desain Eksperimen | WS-07 | |
+| Problem Statement | WS-02 | Integrasi sistem pelayanan publik (SPBE) berjalan masif, namun tingkat implementasi yang "Sangat Baik" rendah (2,89%) dan rentan serangan siber (370 juta+ kasus). |
+| Gap | WS-03 | Tidak ada model mitigasi risiko yang seragam dan terintegrasi untuk interoperabilitas data antar-instansi daerah yang memiliki disparitas kapasitas digital. |
+| RQ | WS-04 | Bagaimana efektivitas kerangka kerja tata kelola berbasis ISO 27001 dibandingkan praktik mandiri dalam memitigasi kebocoran data di pemerintah daerah? |
+| Hipotesis | WS-04 | H₁: Penerapan ISO 27001 secara signifikan menurunkan frekuensi insiden kebocoran data (≥30%) dibandingkan praktik mandiri. |
+| Variabel & Metrik | WS-05 | IV = Metode tata kelola (ISO vs Mandiri); DV = Jumlah insiden kebocoran data; Metrik = Frekuensi insiden per kuartal. |
+| Sistem | WS-06 |Modul kebijakan tata kelola (ISO 27001) yang diintegrasikan ke dalam SOP audit keamanan data instansi pemerintah daerah. |
+| Desain Eksperimen | WS-07 |Studi komparatif antara dua kelompok instansi daerah (kelompok kontrol: praktik mandiri; kelompok perlakuan: penerapan ISO 27001). |
 
 ---
 
@@ -125,18 +125,18 @@ Verifikasi 6 koneksi kritis. Isi dengan merujuk tabel di Latihan 1.
 
 | Koneksi | Status | Bukti |
 |---------|--------|-------|
-| Problem → Gap | *Contoh: ✅ — gap muncul dari 15 paper Bab 3 yang tidak ada yang mengkombinasikan CF + context untuk satisfaction* | |
-| Gap → RQ | *Contoh: ✅ — RQ langsung menanyakan apakah CF+context meningkatkan satisfaction* | |
-| RQ → Hypothesis | *Contoh: ✅ — H₁ memprediksi satisfaction ≥ 70 dengan threshold RMSE ≤ 0.90* | |
-| Hypothesis → Metric | | |
-| Metric → System | | |
-| System → Experiment | | |
+| Problem → Gap |  ✅    |Literasi menunjukkan riset saat ini masih sektoral dan belum ada model mitigasi SPBE yang terintegrasi. |
+| Gap → RQ |  ✅  | RQ fokus pada pengujian efektivitas kerangka kerja untuk menutup gap disparitas tata kelola.|
+| RQ → Hypothesis |  ✅  |H₁ secara spesifik memprediksi dampak ISO 27001 terhadap insiden data sesuai RQ. |
+| Hypothesis → Metric |  ✅   | Metrik "frekuensi insiden" langsung digunakan untuk menguji H₁.|
+| Metric → System |  ✅   | Sistem memonitor insiden sebagai output dari implementasi tata kelola.|
+| System → Experiment |✅ |Eksperimen membandingkan penerapan sistem di dua kondisi (ISO vs Mandiri). |
 
-**Koneksi mana yang paling lemah?** _______________________
+**Koneksi mana yang paling lemah?**Metric → System. _______________________
 **Bagaimana cara memperkuatnya?**
-> ___________________________________________________
+> _Melakukan validasi data dengan triangulasi laporan BSSN agar metrik frekuensi insiden benar-benar merefleksikan performa sistem keamanan di lapangan.__________________________________________________
 
-**Konsistensi horizontal — apakah istilah dan scope konsisten?** [ ] Ya / [ ] Tidak
+**Konsistensi horizontal — apakah istilah dan scope konsisten?** [x ] Ya / [ ] Tidak
 > Jika tidak, di bagian mana terjadi inkonsistensi? _________
 
 ---
@@ -147,15 +147,15 @@ Evaluasi proposal mini menggunakan rubrik.
 
 | Kriteria | Skor (1-3) | Justifikasi |
 |----------|-----------|-------------|
-| Koherensi | *Contoh: 2 — koneksi gap→RQ masih lemah karena gap belum cukup narrow* | |
-| Specificity | *Contoh: 3 — metrik (satisfaction 0-100, RMSE) sudah terdefinisi numerik* | |
-| Feasibility | | |
-| Rigor | | |
+| Koherensi | 3 |Alur dari masalah nasional hingga desain eksperimen bersifat logis dan linier. |
+| Specificity | 3 |Metrik (insiden) dan metode (ISO 27001) sudah terdefinisi secara operasional. |
+| Feasibility | 2| Bergantung pada kerja sama instansi pemerintah daerah yang seringkali sulit diakses.|
+| Rigor |3 |Desain eksperimen komparatif memberikan dasar inferensi yang kuat. |
 
-**Skor total:** _____ / 12
+**Skor total:** 11_____ / 12
 
-**Apakah proposal siap untuk fase eksekusi?** [ ] Ya / [ ] Belum
-> Jika belum, apa yang perlu diperbaiki? __________________
+**Apakah proposal siap untuk fase eksekusi?** [ ] Ya / [ x] Belum
+> Jika belum, apa yang perlu diperbaiki? _Perlu membangun jaringan atau surat izin riset kepada pihak terkait agar akses data insiden di tingkat daerah dapat terjamin kualitasnya._________________
 
 ---
 
@@ -163,8 +163,8 @@ Evaluasi proposal mini menggunakan rubrik.
 
 > Dari seluruh proses WS-01 sampai WS-08, bagian mana yang paling mudah dan paling sulit? Mengapa? Apa yang akan dilakukan berbeda jika mengulang dari awal?
 
-**Bagian termudah:** ____________________________________
-**Bagian tersulit:** ____________________________________
-**Yang akan dilakukan berbeda:**
+**Bagian termudah:** _Problem Formation (karena masalah keamanan siber di Indonesia sangat nyata dan datanya melimpah).___________________________________
+**Bagian tersulit:** Threat Analysis & Fairness (karena mengontrol variabel di lingkungan pemerintahan yang heterogen sangatlah menantang secara teknis dan politis).____________________________________
+**Yang akan dilakukan berbeda:** Jika mengulang, saya akan lebih awal menentukan akses data sebagai variabel penentu (feasibility constraint) sebelum merumuskan desain eksperimen, agar proposal tidak sekadar ideal di atas kertas namun mustahil di lapangan.
 > ___________________________________________________
 > ___________________________________________________
