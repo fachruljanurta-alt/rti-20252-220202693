@@ -103,14 +103,12 @@ Periksa dataset Anda (atau dataset contoh) dan dokumentasikan masalah yang ditem
 
 | Masalah | Jumlah Kasus | Penanganan | Justifikasi |
 |---------|-------------|------------|-------------|
-| *Contoh: Missing di kolom "label"* | *12 dari 500 (2.4%)* | *Listwise deletion* | *< 5%, distribusi random (MCAR)* |
-| | | | |
-| | | | |
-| | | | |
+| Missing di kolom "skor_spbe" | 2 dari 20 (10%) | Imputasi Mean | Data bersifat Missing at Random pada instansi kecil. |
+|Data bersifat Missing at Random pada instansi kecil. |1 dari 20 (5%) |Deduplikasi |Mencegah pembobotan ganda pada insiden yang sama. |
 
-**Jumlah data sebelum cleaning:** ____
-**Jumlah data setelah cleaning:** ____
-**Persentase data yang hilang/berubah:** ____%
+**Jumlah data sebelum cleaning:** __20__
+**Jumlah data setelah cleaning:** ____20
+**Persentase data yang hilang/berubah:**0 ____%
 
 ---
 
@@ -120,16 +118,15 @@ Tentukan apakah data Anda perlu normalisasi, dan jika ya, metode apa yang tepat.
 
 | Variabel | Range Asli | Distribusi | Outlier? | Metode Normalisasi | Alasan |
 |----------|-----------|-----------|----------|-------------------|--------|
-| *Contoh: response_time* | *0.1 – 45.2s* | *Right-skewed* | *Ya (45.2s)* | *Robust scaling* | *Ada outlier, perlu robust* || *Contoh: accuracy_score* | *0.72 – 0.95* | *Normal, narrow* | *Tidak* | *Tidak perlu* | *Sudah dalam [0,1], metode berbasis distance tidak digunakan* || | | | | | |
-| | | | | | |
+| insiden_count | 0 – 22 | *Right-skewed* | *Ya (22) | *Robust scaling* | Adanya outlier (insiden DDoS ekstrem) perlu penanganan agar tidak mendominasi model. |
 
-**Apakah normalisasi diperlukan?** [ ] Ya / [ ] Tidak
+**Apakah normalisasi diperlukan?** [x ] Ya / [ ] Tidak
 **Justifikasi:**
-> ___________________________________________________
+> ___________________________________Normalisasi diperlukan karena data insiden dan skor SPBE memiliki satuan dan skala yang sangat berbeda. Menggunakan Robust Scaling untuk insiden siber memastikan bahwa model statistik tidak bias akibat nilai ekstrem (outlier), sementara Min-Max Scaling untuk skor SPBE memudahkan interpretasi perbandingan.________________
 
 **Leakage check:**
-- [ ] Parameter dihitung dari training set saja
-- [ ] Normalisasi diterapkan setelah train-test split
+- [x ] Parameter dihitung dari training set saja
+- [ x] Normalisasi diterapkan setelah train-test split
 
 ---
 
@@ -140,16 +137,16 @@ Buat ringkasan preprocessing lengkap — dokumentasi yang cukup bagi orang lain 
 ```
 PREPROCESSING SUMMARY
 
-1. Dataset: ____________________
-2. Data awal: ____ records, ____ features
+1. Dataset: Laporan Insiden Siber dan Skor SPBE Pemerintah Daerah 2023
+2. Data awal: 20 records, 4 features
 3. Cleaning:
-   - Missing values: ____ kasus, metode: ____
-   - Duplikat: ____ kasus, tindakan: ____
-   - Error: ____ kasus, tindakan: ____
-4. Transformation: ____________________
-5. Normalisasi: ____ (metode), parameter dari ____
-6. Data akhir: ____ records, ____ features
-7. Leakage check: [ ] Lulus / [ ] Ada masalah
+   - Missing values: 2 kasus, metode: Imputasi Mean
+   - Duplikat: 1 kasus, tindakan: Deduplikasi
+   - Error: 3 kasus format tanggal, tindakan: Standardisasi ISO 8601
+4. Transformation: Encoding kategori "Metode Tata Kelola" menjadi numerik
+5. Normalisasi: Robust Scaling (insiden) & Min-Max (SPBE), parameter dari Training Set
+6. Data akhir: 20 records, 4 features
+7. Leakage check: [x] Lulus / [ ] Ada masalah
 ```
 
 ---
@@ -158,5 +155,5 @@ PREPROCESSING SUMMARY
 
 > Apakah Anda pernah melakukan normalisasi "karena biasa dilakukan" tanpa mempertimbangkan apakah benar-benar diperlukan? Apa risiko over-preprocessing?
 
-> ___________________________________________________
+> Ya, seringkali normalisasi dianggap sebagai "ritual" wajib sebelum masuk ke pemodelan. Namun, over-preprocessing memiliki risiko nyata, yaitu hilangnya informasi interpretatif. Contohnya, melakukan normalisasi berlebihan pada data yang memiliki makna fisik (seperti jumlah insiden siber) dapat menyulitkan pembaca dalam memahami dampak nyata di lapangan. Selain itu, over-preprocessing dapat menyebabkan overfitting pada data training jika transformasi yang dilakukan terlalu kompleks atau tidak relevan dengan karakteristik populasi asli.x___________________________________________________
 > ___________________________________________________
