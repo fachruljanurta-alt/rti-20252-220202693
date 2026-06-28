@@ -116,13 +116,13 @@ Tentukan uji statistik yang tepat untuk eksperimen Anda.
 
 | Pertanyaan | Jawaban |
 |-----------|---------|
-| Berapa grup yang dibandingkan? | *Contoh: 3 (BERT, LSTM, SVM)* |
-| Apakah data berpasangan (paired)? | |
-| Apakah distribusi normal? (uji normalitas) | |
-| **Uji yang dipilih:** | |
-| **Justifikasi:** | |
+| Berapa grup yang dibandingkan? | 2 (ISO 27001 vs Praktik Mandiri) |
+| Apakah data berpasangan (paired)? |Tidak |
+| Apakah distribusi normal? (uji normalitas) | Ya|
+| **Uji yang dipilih:** |Indepedet Sample T-Test |
+| **Justifikasi:** | Digunakan untuk membandingkan rata-rata dari dua kelompok independen dengan distribusi normal.  |
 
-**Effect size yang akan dilaporkan:** [ ] Cohen's d / [ ] Eta-squared / [ ] Lainnya: ____
+**Effect size yang akan dilaporkan:** [ x] Cohen's d / [ ] Eta-squared / [ ] Lainnya: ____
 
 ---
 
@@ -140,11 +140,11 @@ p = 0.045, Cohen's d = 0.74, CI 95% = [0.03, 2.77]
 
 | Aspek | Interpretasi |
 |-------|-------------|
-| Signifikansi statistik | *Contoh: p < 0.05 → signifikan pada α=0.05* |
-| Effect size | *Contoh: d=0.74 → medium-to-large effect* |
-| Practical significance | |
-| Hubungan ke RQ | |
-| Perbandingan literatur | |
+| Signifikansi statistik | p = 0.045 < 0.05, maka terdapat perbedaan signifikan secara statistik pada α=0.05.   |
+| Effect size | Cohen's d = 0.74, menunjukkan dampak medium-to-large. |
+| Practical significance | Penurunan jumlah insiden siber secara praktis menunjukkan peningkatan ketahanan digital instansi.  |
+| Hubungan ke RQ | Hasil mendukung hipotesis bahwa ISO 27001 lebih efektif dalam memitigasi risiko keamanan.|
+| Perbandingan literatur | Hasil konsisten dengan Alfi dkk. (2023) yang menekankan pentingnya tata kelola dalam transformasi digital.  |
 
 ---
 
@@ -156,18 +156,16 @@ Latih kemampuan failure analysis: hipotesis TIDAK didukung. Apa yang bisa dipela
 
 | Pertanyaan | Jawaban |
 |-----------|---------|
-| Apakah ini "gagal"? | *Contoh: Bukan gagal total — hipotesis tidak terdukung adalah temuan yang valid dan bisa menjadi kontribusi.* |
-| Kemungkinan penyebab? | *Contoh: Metode baru menambah kompleksitas komputasi (+40% waktu) tanpa peningkatan F1 yang cukup — overhead tidak sebanding.* |
-| Boundary condition? | *Contoh: Metode ini hanya efektif ketika data ≥ 10.000 record; di dataset kecil (<1.000), baseline lebih stabil.* |
-| Insight yang bisa diambil? | *Contoh: Ada trade-off ukuran data vs kompleksitas — rekomendasikan hybrid approach yang adaptif berdasarkan ukuran dataset.* |
-| Apakah layak dilaporkan? Mengapa? | *Contoh: Ya — negative result + boundary condition analysis adalah kontribusi riset yang diakui komunitas (ex: ACL, SIGIR). Mencegah riset duplikasi yang berulang.* |
+| Apakah ini "gagal"? | Tidak; hipotesis tidak terdukung memberikan pemahaman tentang batasan standar. |
+| Kemungkinan penyebab? | Budaya organisasi yang resisten terhadap SOP baru, sehingga implementasi tidak optimal. |
+| Boundary condition? | Standar ISO 27001 hanya efektif jika dibarengi dengan pelatihan intensif SDM. |
+| Insight yang bisa diambil? | Tata kelola (ISO) bukan solusi instan; harus didukung komitmen SDM tingkat pimpinan. |
+| Apakah layak dilaporkan? Mengapa? | Ya; hasil negatif dengan analisis pemicu adalah kontribusi riset yang mencegah redundansi kebijakan.* |
 
 **Limitation terkait:**
 | Jenis | Ancaman | Dampak |
 |-------|---------|--------|
-| *Contoh: Statistical* | *Contoh: Hanya 5 run per skenario* | *Power test rendah* |
-| | | |
-| | | |
+| Contextual | Jumlah instansi sampel terbatas (n=19) |Jumlah instansi sampel terbatas (n=19) |
 
 ---
 
@@ -175,5 +173,5 @@ Latih kemampuan failure analysis: hipotesis TIDAK didukung. Apa yang bisa dipela
 
 > Apakah "failure" dalam riset benar-benar gagal, atau justru kontribusi? Bagaimana failure analysis mengubah cara Anda melihat hasil negatif?
 
-> ___________________________________________________
+> Hasil negatif atau kegagalan hipotesis bukanlah kegagalan riset, melainkan bentuk "koreksi diri" bagi komunitas akademik. Failure analysis mengubah pandangan saya bahwa riset bukan tentang "membuktikan saya benar", melainkan tentang "menemukan apa yang sebenarnya terjadi". Hasil negatif yang disertai analisis mendalam justru memberikan kontribusi yang lebih berharga karena memberikan batasan (boundary conditions) yang jelas, sehingga peneliti lain tidak perlu mengulangi kesalahan yang sama atau mencoba metode yang sudah terbukti kurang efektif dalam konteks tertentu.  ___________________________________________________
 > ___________________________________________________
