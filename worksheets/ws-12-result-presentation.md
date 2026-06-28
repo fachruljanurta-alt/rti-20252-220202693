@@ -94,15 +94,15 @@ Buat tabel hasil eksperimen Anda (boleh dengan data simulasi jika belum punya da
 
 | Skenario | Metrik 1 (mean ± std) | Metrik 2 (mean ± std) | n |
 |----------|----------------------|----------------------|---|
-| *Contoh: BERT-base* | *88.4 ± 1.2%* | *45.2 ± 3.1 min* | *10* |
-| | | | |
+| ISO 27001 | 3.2 ± 0.8 | 3.8 ± 0.3 | *10* |
+|Praktik Mandiri |8.6 ± 1.5 |2.1 ± 0.5 |9 |
 | | | | |
 
 **Checklist tabel:**
-- [ ] Self-contained (judul jelas, satuan ada, N tercantum)
-- [ ] Mean ± std (bukan single number)
-- [ ] Diurutkan berdasarkan metrik utama
-- [ ] Format konsisten di semua baris
+- [ x] Self-contained (judul jelas, satuan ada, N tercantum)
+- [x ] Mean ± std (bukan single number)
+- [x ] Diurutkan berdasarkan metrik utama
+- [x ] Format konsisten di semua baris
 
 ---
 
@@ -112,9 +112,9 @@ Rencanakan 2-3 grafik untuk menyajikan data dari Latihan 1. Setiap grafik = satu
 
 | # | Jenis Grafik | Pesan | Data yang Digunakan |
 |---|-------------|-------|---------------------|
-| 1 | *Contoh: Bar chart + error bar* | *Perbandingan accuracy antar 3 model* | *Mean accuracy ± std* |
-| 2 | *Box plot* | *Distribusi F1 per model* | *Semua run F1* |
-| 3 | *Scatter plot* | *Trade-off accuracy vs training time* | *Mean accuracy vs mean time* |
+| 1 | *Bar chart + error bar* | ISO 27001 menurunkan jumlah insiden secara signifikan. | Mean insiden ± std |
+| 2 | *Box plot* | ISO 27001 memberikan konsistensi performa (varians rendah). | Seluruh data insiden (n=19) |
+| 3 | *Scatter plot* | Korelasi antara maturitas SPBE dan rendahnya insiden. | Skor SPBE vs Jumlah Insiden |
 
 ---
 
@@ -126,13 +126,13 @@ Evaluasi visualisasi berikut untuk bias (skenario dari contoh):
 
 | Pertanyaan | Jawaban |
 |-----------|---------|
-| Apakah Y-axis menyesatkan? | *Contoh: Ya — A terlihat 2× B padahal beda 0.4%* |
-| Apakah error bar ditampilkan? | |
-| Apakah semua kondisi ditampilkan? | |
-| Apa solusinya? | |
+| Apakah Y-axis menyesatkan? | Ya — Memulai axis dari 90% melebih-lebihkan selisih performa visual secara drastis. |
+| Apakah error bar ditampilkan? | Tidak (asumsi skenario).|
+| Apakah semua kondisi ditampilkan? |Ya |
+| Apa solusinya? | Memulai Y-axis dari 0 atau menggunakan broken-axis dengan keterangan jelas.|
 
 **Evaluasi grafik Anda sendiri dari Latihan 2:**
-- [ ] Semua bias check lulus
+- [x ] Semua bias check lulus
 - [ ] Ada yang perlu diperbaiki: ____
 
 ---
@@ -140,6 +140,12 @@ Evaluasi visualisasi berikut untuk bias (skenario dari contoh):
 ## Refleksi
 
 > Mengapa tabel dan grafik keduanya diperlukan — tidak cukup salah satu saja? Pernahkah Anda membuat grafik yang (tanpa sengaja) menyesatkan?
+>
+> Mengapa tabel dan grafik keduanya diperlukan?
+Tabel diperlukan untuk presisi; pembaca yang ingin melakukan kalkulasi ulang atau melihat nilai eksak sangat bergantung pada tabel. Grafik diperlukan untuk interpretasi cepat; mata manusia lebih cepat menangkap tren, pola, dan anomali (seperti outlier B4 pada riset kita) melalui visualisasi dibandingkan deretan angka. Kombinasi keduanya adalah bentuk integritas riset: tabel memberikan bukti data, grafik memberikan pemahaman naratif.
+
+Pernahkah membuat grafik yang (tanpa sengaja) menyesatkan?
+Pernah, saat membuat grafik pie chart dengan terlalu banyak kategori yang mirip, sehingga perbedaan kecil terlihat besar atau sulit dibaca. Grafik tersebut menyesatkan karena tidak memberikan informasi yang akurat mengenai proporsi sebenarnya, yang kemudian saya perbaiki menjadi bar chart agar setiap batang memiliki titik awal dan akhir yang jelas untuk dibandingkan.
 
 > ___________________________________________________
 > ___________________________________________________
