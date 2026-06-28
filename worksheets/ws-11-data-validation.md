@@ -100,15 +100,13 @@ Verifikasi apakah semua data yang direncanakan sudah terkumpul.
 
 | Skenario | Run Direncanakan | Run Tercatat | Missing | Alasan |
 |----------|-----------------|-------------|---------|--------|
-| *Contoh: BERT, DS-1* | *10* | *10* | *0* | *—* |
-| *LSTM, DS-3* | *10* | *8* | *2* | *OOM pada run 7 & 9* |
-| | | | | |
-| | | | | |
+| ISO 27001 (Instasni  A) | *10* | *10* | *0* | *—* |
+| Praktik Mandiri (Instansi B) | 10 | 9 | 1   | Instansi B7 menolak memberikan data insiden kuartal terakhir |
 
-**Total expected:** ____ | **Total actual:** ____ | **Missing:** ____
+**Total expected:** _20___ | **Total actual:** 19____ | **Missing:** _1___
 
 **Keputusan untuk data missing:**
-> ___________________________________________________
+> ___________________________________________________Melakukan imputasi rata-rata dari data instansi kelompok Praktik Mandiri lainnya untuk mengisi satu data yang hilang, dengan catatan bahwa angka tersebut merupakan estimasi statistik yang tidak akan mengubah signifikansi hasil secara drastis.  
 
 ---
 
@@ -127,16 +125,19 @@ Periksa data Anda untuk anomali. Gunakan metode IQR atau z-score.
 | 5 | *91.0* |
 
 **Deteksi outlier:**
-- Q1 = ____ | Q3 = ____ | IQR = ____
-- Batas bawah (Q1 - 1.5×IQR) = ____
-- Batas atas (Q3 + 1.5×IQR) = ____
-- Outlier terdeteksi: ____
+- Q1 = 5 | Q3 = 6 | IQR = 1
+
+-Batas bawah (5 - 1.5 × 1) = 3.5
+
+-Batas atas (6 + 1.5 × 1) = 7.5
+
+-Outlier terdeteksi: 22
 
 **Investigasi (untuk setiap outlier):**
 
 | Outlier | Nilai | Kemungkinan Penyebab | Keputusan |
 |---------|-------|---------------------|-----------|
-| *Run 4* | *78.3* | *Contoh: thermal throttling setelah 3 run berturut* | *Re-run dengan cooling interval* |
+| *Run 4* | 22 | Serangan siber skala besar (DDoS) yang tidak terprediksi | Tetap diikutsertakan sebagai kasus extreme namun diberi narasi khusus dalam pembahasan |
 
 ---
 
@@ -144,12 +145,12 @@ Periksa data Anda untuk anomali. Gunakan metode IQR atau z-score.
 
 Buat laporan validasi ringkas untuk dataset eksperimen Anda.
 
-**1. Completeness:** ____% data terkumpul
-**2. Format:** [ ] Konsisten / [ ] Ada inkonsistensi: ____
-**3. Range check (anomali):** ____
-**4. Logic check:** [ ] Parameter sesuai plan / [ ] Ada ketidaksesuaian: ____
+**1. Completeness:** _95___% data terkumpul
+**2. Format:** [x ] Konsisten / [ ] Ada inkonsistensi: ____
+**3. Range check (anomali):** Terdeteksi 1 outlier (nilai 22) yang merupakan peristiwa serangan siber luar biasa.____
+**4. Logic check:** [x ] Parameter sesuai plan / [ ] Ada ketidaksesuaian: ____
 
-**Kesimpulan:** [ ] Data siap analisis / [ ] Perlu tindakan: ____
+**Kesimpulan:** [x ] Data siap analisis / [ ] Perlu tindakan: ____
 
 ---
 
@@ -159,3 +160,4 @@ Buat laporan validasi ringkas untuk dataset eksperimen Anda.
 
 > ___________________________________________________
 > ___________________________________________________
+Data yang "benar" merujuk pada akurasi angka hasil pengukuran, sedangkan data yang "dipercaya" adalah data yang konteksnya valid, konsisten, dan mencerminkan fenomena yang diteliti. Proses validasi formal tetap mutlak diperlukan meskipun pengumpulan data dilakukan secara otomatis karena alat pengumpul data (seperti sistem logging atau kuesioner) tidak dapat mendeteksi kesalahan logika atau bias sistemik dalam konfigurasi eksperimen yang mungkin saja terjadi sejak awal. Validasi formal berfungsi sebagai jaring pengaman intelektual untuk memastikan data yang terkumpul tidak hanya sekadar "ada", tetapi juga reliabel untuk dijadikan landasan riset.  
